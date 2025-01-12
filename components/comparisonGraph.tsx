@@ -14,7 +14,7 @@ const ComparisonGraph: React.FC = () => {
     datasets: [
       {
         label: 'Your Percentile',
-        data: [10, 100, 90, 10, score?.percentile], 
+        data: [10, 90, 90, 10, score?.percentile], 
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         pointRadius: 3,
@@ -59,7 +59,7 @@ const ComparisonGraph: React.FC = () => {
   return (
     <div className="bg-white p-4 rounded shadow">
       <h2 className="text-xl font-semibold mb-2">Comparison Graph</h2>
-      <p>
+      <p className='mb-5'>
         You scored {score?.percentile}% percentile which is lower than the average percentile 72% of
         all the engineers who took this assessment.
       </p>
