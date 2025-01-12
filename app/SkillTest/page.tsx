@@ -18,11 +18,11 @@ const SkillTestPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container min-w-100vw  p-4">
       <UpdateScoresModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <h1 className="text-xl font-bold mb-4">Skill Test</h1>
-      <div className="flex flex-wrap gap-4">
-        <div className="flex flex-col gap-4 w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col  gap-4 w-full md:w-1/2">
           <Questions
             title="Hyper Text Mark Up Language"
             questions={8}

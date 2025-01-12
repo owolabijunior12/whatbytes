@@ -33,7 +33,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
 
   return (
     <div className="fixed inset-0 z-10 flex items-center justify-center w-auto bg-black bg-opacity-90">
-      <div className="bg-white rounded-lg shadow-xl   max-w-xl p-6">
+      <div className="bg-white rounded-lg shadow-xl max-w-[97%]   p-6">
         <div className='flex justify-between items-center'>
             <h3 className="text-lg  leading-6 font-bold">Update Scores</h3>
             <Image src="/html.png" alt='' width={40} height={40} onClick={onClose} />
@@ -75,10 +75,10 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
             </div>
           </div>
           <div className="mb-4 flex items-center justify-between gap-3">
-          <div  className="text-sm items-center  flex gap-2">
+          <div  className="text-sm items-center  flex g">
                 <span className='bg-blue-800 text-white w-7 h-7 text-center p-1 rounded-full'>3</span>
                 <span>Update your</span>
-                <span className='font-bold'>Current Score(out of 15)</span>             
+                <span className='font-bold text-xs md:text-sm'>Current Score(out of 15)</span>             
             </div>
             <div className='flex w-[30%] flex-col'>
                 <input

@@ -4,7 +4,7 @@ import SkillTestPage from "./SkillTest/page";
 
 export default function Home() {
   return (
-    <div className="flex  ">
+    <div className="flex  w-screen ">
       <Sidebar/>
      <SkillTestPage/> 
     </div>
