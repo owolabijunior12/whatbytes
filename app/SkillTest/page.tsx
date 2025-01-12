@@ -9,17 +9,14 @@ import UpdateScoresModal from '@/components/updateScores';
 import { useStateValue } from '@/Context/StateProvider';
 
 const SkillTestPage: React.FC = () => {    
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [scoreData, setScoreData] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);  
 
-  const handleUpdateClick = (data: object) => {
-    setScoreData(data);
-    console.log('Data from Questions component:', data); // Log the data to console
-    setIsModalOpen(true); // Open the modal
+ const handleUpdateClick = (data: object) => {    
+    setIsModalOpen(true); 
   };
 
   return (
-    <div className="container min-w-100vw  p-4">
+    <div className="container min-w-[84vw] md:w- p-4">
       <UpdateScoresModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <h1 className="text-xl font-bold mb-4">Skill Test</h1>
       <div className="flex flex-col md:flex-row gap-4">
@@ -28,8 +25,7 @@ const SkillTestPage: React.FC = () => {
             title="Hyper Text Mark Up Language"
             questions={8}
             duration="15 minutes"
-            submissionDate="5 June 2021"
-            open={false}
+            submissionDate="5 June 2021"            
             onUpdate={() => handleUpdateClick({ title: 'Hyper Text Mark Up Language', questions: 8, duration: '15 minutes', submissionDate: '5 June 2021' })}
           />
           <QuickStatistics />

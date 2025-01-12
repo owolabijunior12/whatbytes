@@ -14,7 +14,7 @@ export default function Home() {
    
        <StateProvider initialState={initialState} reducer={reducer}>
        <Header/>
-      <div className="flex  w-screen ">
+      <div className="flex min-w-[100vw] ">
           <Sidebar/>
           <SkillTestPage/> 
       </div>
