@@ -4,7 +4,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="flex justify-between min-w-[100vw] shadow-md text-black p-4 mb-1">
+    <header className="flex justify-between min-w-[90vw] shadow-md text-black p-4 mb-1">
 
         <div className='flex gap-2 items-center'>
           {/* <div className='p-1 md:hidden rounded-md border' onClick={()=>console.log('open side bar')}>
