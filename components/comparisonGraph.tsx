@@ -3,6 +3,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 import { useStateValue } from '@/Context/StateProvider';
+import Image from 'next/image';
 
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Title);
 
@@ -58,11 +59,18 @@ const ComparisonGraph: React.FC = () => {
 
   return (
     <div className="bg-white p-4 rounded shadow">
-      <h2 className="text-xl font-semibold mb-2">Comparison Graph</h2>
-      <p className='mb-5'>
-        You scored {score?.percentile}% percentile which is lower than the average percentile 72% of
-        all the engineers who took this assessment.
-      </p>
+      <div className='flex'>
+        <div>          
+            <h2 className="text-xl font-semibold mb-2">Comparison Graph</h2>
+            <p className='mb-5'>
+              You scored {score?.percentile}% percentile which is lower than the average percentile 72% of
+              all the engineers who took this assessment.
+            </p>
+        </div>
+        <div className='rounded-full flex justify-center items-center p-3 h-[40px] bg-slate-300 '>
+          <Image src={"/chart.png"} alt='logo' height={40} objectFit="cover" width={50}/>
+        </div>
+      </div>
       <Line data={data} options={options} />
     </div>
   );

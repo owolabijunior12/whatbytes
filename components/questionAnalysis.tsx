@@ -35,20 +35,18 @@ const QuestionAnalysis: React.FC = () => {
 
   return (
     <div className="bg-white p-4 rounded shadow flex flex-col items-center">
-      <div className='flex w-full justify-between'>
-        <h2 className=" font-semibold">Question Analysis</h2>
-        <span className='text-blue-700 font-bold'>{correctAnswers}/15</span>
-      </div>
-        <p>
-        You scored {correctAnswers} questions correct out of 15. However, it still needs some improvements.
-      </p>
-      <div className="relative">
-        <Doughnut data={data} options={options} />
-        <div className="absolute top-[50%] bottom-[50%] right-[50%] left-[60%] transform -translate-x-1/2 -translate-y-1/2">
-          🎯
-        </div>
-      </div>     
+    <div className='flex w-full justify-between'>
+      <h2 className=" font-semibold">Question Analysis</h2>
+      <span className='text-blue-700 font-bold'>{correctAnswers}/15</span>
     </div>
+    <p>
+      You scored {correctAnswers} questions correct out of 15. However, it still needs some improvements.
+    </p>
+    <div className="relative w-full max-w-[200px]"> {/* Added w-full and max-w-[200px] */}
+      <Doughnut data={data} options={options} />
+      <div className="absolute top-[50%] left-[50%] text-xl transform -translate-x-1/2 -translate-y-1/2"> 🎯 </div> 
+    </div> 
+  </div>
   );
 };
 
