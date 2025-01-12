@@ -6,8 +6,9 @@ import SyllabusWiseAnalysis from '@/components/syllabusWiseAnalysis';
 import QuestionAnalysis from '@/components/questionAnalysis';
 import Questions from '@/components/questions';
 import UpdateScoresModal from '@/components/updateScores';
+import { useStateValue } from '@/Context/StateProvider';
 
-const SkillTestPage: React.FC = () => {
+const SkillTestPage: React.FC = () => {    
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [scoreData, setScoreData] = useState({});
 

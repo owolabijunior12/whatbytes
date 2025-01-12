@@ -1,4 +1,6 @@
 'use client';
+import { actionType } from '@/Context/reducer';
+import { useStateValue } from '@/Context/StateProvider';
 import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
@@ -9,16 +11,22 @@ interface UpdateScoresModalProps {
 }
 
 const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }) => {
+    const [score, dispatch] = useStateValue();
+ 
+  
   const [rank, setRank] = React.useState(4);
   const [percentile, setPercentile] = React.useState(100);
   const [currentScore, setCurrentScore] = React.useState(12);
 
   const handleSave = () => {
-    console.log('Updated scores:', { rank, percentile, currentScore });
+    dispatch({
+      type: actionType.SET_SCORE, 
+      score: {rank, percentile, currentScore}
+    });    
     onClose();
   };
 
-  
+   console.log(score);
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && isOpen) {
