@@ -80,7 +80,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
           <Image src="/html.png" alt="" width={40} height={40} onClick={onClose} />
         </div>
         <div className="mt-4">
-          {/* Rank Input */}
+          
           <div className="mb-4 flex items-center justify-between gap-3">
             <div className="text-sm items-center w-full flex gap-2">
               <span className="bg-blue-800 text-white w-7 h-7 text-center p-1 rounded-full">1</span>
@@ -99,7 +99,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
             </div>
           </div>
 
-          {/* Percentile Input */}
+         
           <div className="mb-4 flex items-center justify-between gap-3">
             <div className="text-sm items-center flex gap-2">
               <span className="bg-blue-800 text-white w-7 h-7 text-center p-1 rounded-full">2</span>
@@ -119,7 +119,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
             </div>
           </div>
 
-          {/* Current Score Input */}
+          
           <div className="mb-4 flex items-center justify-between gap-3">
             <div className="text-sm items-center flex gap-2">
               <span className="bg-blue-800 text-white w-7 h-7 text-center p-1 rounded-full">3</span>

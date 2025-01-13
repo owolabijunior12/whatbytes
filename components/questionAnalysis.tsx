@@ -30,7 +30,7 @@ const QuestionAnalysis: React.FC = () => {
         position: 'right' as const,
       },
     },
-    cutout: '80%', 
+    cutout: '70%', 
   };
 
   return (
@@ -42,9 +42,9 @@ const QuestionAnalysis: React.FC = () => {
     <p>
       You scored {correctAnswers} questions correct out of 15. However, it still needs some improvements.
     </p>
-    <div className="relative w-full max-w-[200px]"> {/* Added w-full and max-w-[200px] */}
+    <div className="relative w-full max-w-[170px]"> 
       <Doughnut data={data} options={options} />
-      <div className="absolute top-[50%] left-[50%] text-xl transform -translate-x-1/2 -translate-y-1/2"> 🎯 </div> 
+      <div className="absolute top-[50%] left-[50%] text-2xl transform -translate-x-1/2 -translate-y-1/2"> 🎯 </div> 
     </div> 
   </div>
   );
