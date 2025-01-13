@@ -14,7 +14,7 @@ const QuickStatistics: React.FC = () => {
           </div>
           <div className="flex flex-col items-start">
             <span className="text-sm md:text-lg  font-bold">{score?.rank || 0}</span>
-            <span className="text-gray-300 md:uppercase text-[6px] md:text-sm">Your Rank</span>
+            <span className="text-gray-300 md:uppercase text-[6px] lg:text-lg md:text-[10px]">Your Rank</span>
           </div>
         </div>
         <div className="w-px h-7 bg-black"></div> 
@@ -24,7 +24,7 @@ const QuickStatistics: React.FC = () => {
           </div>
           <div className="flex flex-col items-start">
             <span className="text-sm md:text-lg  font-bold">{score?.percentile || 0}%</span>
-            <span className="text-gray-300 md:uppercase text-[6px] md:text-sm">Percentage</span>
+            <span className="text-gray-300 md:uppercase text-[6px] md:text-[10px] lg:text-lg">Percentage</span>
           </div>
         </div>
         <div className="w-px h-7 bg-black"></div> 
@@ -34,7 +34,7 @@ const QuickStatistics: React.FC = () => {
           </div>
           <div className="flex flex-col items-start">
             <span className="text-sm md:text-lg font-bold">{score?.currentScore || 0}/15</span>
-            <span className="text-gray-300 md:uppercase text-[6px] md:text-sm">Correct Answer</span>
+            <span className="text-gray-300 md:uppercase text-[6px] md:text-[10px] lg:text-lg">Correct Answer</span>
           </div>
         </div>
       </div>
