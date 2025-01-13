@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         </div>
         <div className='flex rounded-lg gap-2 border m-0 p-0 px-1  border-gray-400  items-center'>
             <Image 
-                src={'/logo.jpeg'}
+                src={'/IMG-20250113-WA0002.jpg'}
                 width={20} 
                 height={20} 
                 className='rou rounded-full'
