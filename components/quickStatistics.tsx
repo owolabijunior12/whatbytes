@@ -10,7 +10,7 @@ const QuickStatistics: React.FC = () => {
       <h2 className="text-md font-semibold mb-2">Quick Statistics</h2>
       <div className="flex gap-4 justify-between">
         <div className="flex gap-1 md:gap-2 items-center mb-2">
-          <div className="rounded-full text-xs md:text-sm bg-slate-100 p-1 md:p-3 border">
+          <div className="rounded-full text-sm md:text-lg bg-slate-100 p-1 md:p-3 border">
             🏆
           </div>
           <div className="flex flex-col items-start">
@@ -20,8 +20,8 @@ const QuickStatistics: React.FC = () => {
         </div>
 
         <div className="flex gap-1 md:gap-4 items-center mb-2">
-          <div className="rounded-full text-xs md:text-lg bg-slate-100 p-1 md:p-3 border">
-          📅
+          <div className="rounded-full text-sm md:text-lg bg-slate-100 p-1 md:p-3 border">
+          🗓️
           </div>
           <div className="flex flex-col items-start">
             <span className="text-sm md:text-lg font-bold">{score?.percentile || 0}%</span>
@@ -30,7 +30,7 @@ const QuickStatistics: React.FC = () => {
         </div>
 
         <div className="flex gap-1 md:gap-4 items-center mb-2">
-          <div className="rounded-full bg-slate-100 p-1 md:p-3 text-xs md:text-lg border">
+          <div className="rounded-full bg-slate-100 p-1 md:p-3 text-sm md:text-lg border">
             ✅
           </div>
           <div className="flex flex-col items-start">
