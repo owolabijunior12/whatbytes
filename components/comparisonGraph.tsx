@@ -14,7 +14,7 @@ const ComparisonGraph: React.FC = () => {
         datasets: [
             {
                 label: 'Your Percentile',
-                data: [10, 90, 90, 10, score?.percentile],
+                data: [10, 60, 20, 10, score?.percentile],
                 fill: false,
                 borderColor: 'rgb(49, 46, 129)', 
                 borderWidth: 2, 
@@ -68,7 +68,7 @@ const ComparisonGraph: React.FC = () => {
                         all the engineers who took this assessment.
                     </p>
                 </div>
-                <div>📈</div>
+                <div className='text-2xl border-none'>📈</div>
             </div>
             <Line data={data} options={options} />
         </div>

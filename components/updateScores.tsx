@@ -50,14 +50,47 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
     return isValid;
   };
 
+const handleRankChange = (e: any) => {
+  const newRank = parseInt(e.target.value); 
+  setRank(newRank);
+
+  if (newRank <= 0) {
+    setRankError('Rank must be a positive number.');
+  } else {
+    setRankError('');
+  }
+};
+
+const handlePercentileChange = (e: any) => {
+  const newPercentile = parseInt(e.target.value);
+  setPercentile(newPercentile);
+
+  if (newPercentile < 0 || newPercentile > 100) {
+    setPercentileError('Percentile must be between 0 and 100.');
+  } else {
+    setPercentileError('');
+  }
+};
+
+const handleCurrentScoreChange = (e: any) => {
+  const newCurrentScore = parseInt(e.target.value);
+  setCurrentScore(newCurrentScore);
+
+  if (newCurrentScore < 0 || newCurrentScore > 15) {
+    setCurrentScoreError('Current Score must be between 0 and 15.');
+  } else {
+    setCurrentScoreError('');
+  }
+};
+  
   const handleSave = () => {
-    if (validateInputs()) {
+    // if () {
       dispatch({
         type: actionType.SET_SCORE,
         score: { rank, percentile, currentScore },
       });
       onClose();
-    }
+    // }
   };
 
   useEffect(() => {
@@ -66,6 +99,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
         onClose();
       }
     };
+    validateInputs()
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
@@ -92,7 +126,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
                 type="number"
                 id="rank"
                 value={rank}
-                onChange={(e:any) => setRank(e.target.value)}
+                onChange={handleRankChange} 
                 className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
               {rankError && <span className="text-red-600 text-[12px]">{rankError}</span>}
@@ -112,7 +146,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
                 max={100}
                 id="percentile"
                 value={percentile}
-                onChange={(e:any) => setPercentile(e.target.value)}
+                onChange={handlePercentileChange} 
                 className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
               {percentileError && <span className="text-red-600 text-[12px]">{percentileError}</span>}
@@ -132,7 +166,7 @@ const UpdateScoresModal: React.FC<UpdateScoresModalProps> = ({ isOpen, onClose }
                 max={15}
                 id="currentScore"
                 value={currentScore}
-                onChange={(e : any) => setCurrentScore(e.target.value)}
+                onChange={handleCurrentScoreChange} 
                 className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
               {currentScoreError && <span className="text-red-600 text-[12px]">{currentScoreError}</span>}
