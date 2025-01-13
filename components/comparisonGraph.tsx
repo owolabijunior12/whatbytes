@@ -31,7 +31,7 @@ const ComparisonGraph: React.FC = () => {
             tooltip: {
                 enabled: true, 
                 callbacks: {
-                    label: (context) => `${context.raw}%`, 
+                    label: (context : any) => `${context.raw}%`, 
                 },
             },
             legend: {
