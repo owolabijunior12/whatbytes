@@ -1,4 +1,4 @@
-"use client"
+it"use client"
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, CategoryScale, Tooltip } from 'chart.js';
@@ -53,12 +53,6 @@ const ComparisonGraph: React.FC = () => {
                 },
                 ticks: {
                     display: false, 
-                },
-                min: 0,
-                max: 100,
-                ticks: {
-                    stepSize: 25,
-                    callback: (value) => `${value}%`, 
                 },
             },
         },
