@@ -16,8 +16,7 @@ export default function Home() {
 
   
 
-  return (
-   
+  return (   
        <StateProvider initialState={initialState} reducer={reducer}>
        <Header/>
       <div className="flex min-w-[100vw] ">
