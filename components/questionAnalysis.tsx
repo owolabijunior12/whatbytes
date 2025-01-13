@@ -44,7 +44,7 @@ const QuestionAnalysis: React.FC = () => {
     </p>
     <div className="relative w-full max-w-[170px]"> 
       <Doughnut data={data} options={options} />
-      <div className="absolute top-[50%] left-[50%] text-2xl transform -translate-x-1/2 -translate-y-1/2"> 🎯 </div> 
+      <div className="absolute top-[50%] left-[45%] text-3xl transform -translate-x-1/2 -translate-y-1/2"> 🎯 </div> 
     </div> 
   </div>
   );
