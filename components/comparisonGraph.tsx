@@ -67,8 +67,8 @@ const ComparisonGraph: React.FC = () => {
               all the engineers who took this assessment.
             </p>
         </div>
-        <div className='rounded-full flex justify-center items-center p-3 h-[40px] bg-slate-300 '>
-          <Image src={"/chart.png"} alt='logo' height={40} objectFit="cover" width={50}/>
+        <div className=' '>
+            📈
         </div>
       </div>
       <Line data={data} options={options} />
